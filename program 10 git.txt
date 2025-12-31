@@ -1,0 +1,18 @@
+his experiment is about filtering Git commit history based on a specific author and a date range. Essentially, it teaches you how to check which commits were made by a particular developer between certain dates. It helps in tracking contributions, reviewing changes, or auditing work.
+
+Here’s a 4–5 line version of what you can put in your manual:
+
+echo "I am in 10a" >> lab10a.txt
+git add .
+git commit -m "I am in 10a"
+
+echo "I am in 10b" >> lab10b.txt
+git add .
+git commit -m "I am in 10b"
+
+echo "I am in 10c" >> lab10c.txt
+git add .
+git commit -m "I am in 10c"
+
+# List commits by author 'user' between 2024-01-01 and 2024-02-07
+git log --author="user" --since="2024-01-01" --until="2024-02-07"

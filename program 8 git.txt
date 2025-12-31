@@ -1,0 +1,22 @@
+This experiment explains how Git stores every change as a commit with a unique commit ID (hash).
+Using the git show command, we can display full information about a specific commit, including:
+
+Commit hash
+
+Author name
+
+Date and time
+
+Commit message
+
+Changes made to files
+
+This helps in tracking history and verifying modifications in a repository.
+
+git checkout master
+echo "I am in 8a" >> lab8a.txt
+git add .
+git commit -m " I am in 8a branch master "
+git log
+git show f7b46493e18b1dd58703830637ae9d3e615adbde
+

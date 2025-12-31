@@ -1,0 +1,33 @@
+Theory: Cherry-Pick in Git
+
+Git Cherry-Pick is a command used to apply a specific commit from one branch to another without merging the entire branch.
+
+Unlike git merge, which combines all changes from one branch, cherry-pick allows you to select only the commits you need.
+
+It is useful when:
+
+You want to apply a bug fix from a feature branch to master.
+
+You need a specific feature from another branch without merging all other changes.
+
+
+
+
+# 1. Make sure you are on master and create a master commit
+git checkout master
+echo "I am in 9a" >> lab9a.txt
+git add lab9a.txt
+git commit -m "I am in 9a branch master"
+
+# 2. Create and switch to new branch 'cheery', add a commit
+git checkout -b cheery
+echo "I am in 9b" >> lab9b.txt
+git add lab9b.txt
+git commit -m "I am in 9b branch cheery"
+
+# 3. Switch back to master and cherry-pick the commit from cheery
+git checkout master
+git cherry-pick $(git log cheery --oneline -1 --pretty=format:"%h")
+
+# 4. Verify the cherry-pick
+git log --oneline

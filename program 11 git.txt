@@ -1,0 +1,20 @@
+Experiment Explanation:
+
+This experiment is about viewing the last few commits in a Git repository.
+
+Every time you make changes and commit them in Git, a commit is created with a unique ID, author info, date, and a commit message.
+
+Sometimes, you don’t need the full history; you just want to see the most recent commits.
+
+This experiment teaches you how to add files, commit changes, and then view the last 5 commits. 
+
+
+echo "I am in 11a" >> lab11a.txt
+echo "I am in 11b" >> lab11b.txt
+echo "I am in 11c" >> lab11c.txt
+echo "I am in 11d" >> lab11d.txt
+echo "I am in 11e" >> lab11e.txt
+
+git add .
+git commit -m "create index files"
+git log -n 5

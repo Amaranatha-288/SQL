@@ -1,0 +1,46 @@
+# Step 1: Create and edit a file in main branch
+vi index.txt        # create/edit file
+git add .           
+git commit -m "create index file"   # commit changes
+
+# Step 2: Create a new branch 'feature' and switch to it
+git branch feature
+git checkout feature
+# OR combine: git checkout -b feature
+
+# Step 3: Create/edit a new file in feature branch
+vi feature.txt
+git add .           # stage changes
+git commit -m "work in progress"   # commit changes
+
+# Step 4: Make changes to index.txt in feature branch
+vi index.txt
+
+# Check status
+git status
+
+# Step 5: Switch to main branch (changes are uncommitted)
+git checkout main
+
+# Step 6: Stash the changes
+git stash
+
+# Step 7: Check stash list
+git stash list
+
+# Step 8: Switch back to feature branch
+git checkout feature
+
+# Step 9: Apply stashed changes to feature branch
+git stash pop
+
+# Step 10: Check stash list (should be empty if applied)
+git stash list
+
+# Step 11: Stage and commit the applied changes
+git add .
+git commit -m "create index file changed in feature"
+
+# Step 12: Verify
+git status
+git log --oneline --graph --all

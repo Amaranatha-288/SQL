@@ -1,0 +1,27 @@
+Explanation:
+
+This creates a new commit that undoes the changes from commit abc123.
+
+Safe for branches shared with others because it doesn’t rewrite history.
+
+After running this, Git will open an editor to enter a commit message for the revert. Save and close it.
+
+git checkout master
+echo "I am in 12a branch master" >> 12a.txt
+git add 12a.txt
+git commit -m "I am in 12a branch master"
+
+echo "I am in 12b branch master" >> 12b.txt
+git add 12b.txt
+git commit -m "I am in 12b branch master"
+
+echo "I am in 12a branch master changes 1" >> 12a.txt
+git add 12a.txt
+git commit -m "I am in 12a branch master changes 1"
+
+echo "I am in 12b branch master changes 1" >> 12b.txt
+git add 12b.txt
+git commit -m "I am in 12b branch master changes 1"
+
+git log --oneline
+git revert ec9d05e

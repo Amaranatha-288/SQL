@@ -1,0 +1,44 @@
+mkdir 3VC24CS010
+# Creates a new directory named '3VC24CS010' to store my Git repository files.
+
+ls
+# Lists the contents of the current directory to verify the creation of the new folder.
+
+cd 3VC24CS010
+# Changes the current working directory to '3VC24CS010'.
+
+git init
+# Initializes an empty Git repository in this folder, allowing version control.
+
+git config --list
+# Displays the current Git configuration settings to verify username and email.
+
+git config --global user.name "3VC24CS010"
+# Sets the global Git username as '3VC24CS010' for commit identification.
+
+git config --global user.email "amaranathahcse@gmail.com"
+# Sets the global Git email as 'amaranathahcse@gmail.com' for commit identification.
+
+git clone https://github.com/Amaranatha-288/3VC24CS010.git
+# Clones the remote GitHub repository into the current directory so that I can work on it locally.
+
+cd 3VC24CS010
+# Changes into the cloned repository directory to start working on files.
+
+echo "hello git and git hub" >> lab1.txt
+# Creates a new file 'lab1.txt' and writes the text "hello git and git hub" into it.
+
+git status
+# Checks the current status of files in the repository, showing untracked or modified files.
+
+git add lab1.txt
+# Adds 'lab1.txt' to the staging area, preparing it for commit.
+
+git status
+# Verifies that 'lab1.txt' is staged and ready to be committed.
+
+git commit -m "first msg"
+# Commits the staged changes with the message "first msg" to record the version in Git history.
+
+git push origin main
+# Pushes the committed changes from the local 'main' branch to the remote repository on GitHub.

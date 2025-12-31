@@ -1,0 +1,19 @@
+Theory
+
+Git tags are used to mark specific points in a repository’s history, usually to represent software versions such as v1.0 or v1.1. Tags help developers easily identify important commits like releases or stable versions.
+
+There are two types of tags in Git:
+
+Lightweight tags – These are simple pointers to a commit and do not store extra information.
+
+Annotated tags – These store additional details such as tag message, author name, email, and date.
+
+In this experiment, a lightweight tag (v1.0) and an annotated tag (v1.1) are created and listed using Git commands. The tag details can be viewed using the git show command.
+
+
+git checkout main
+git tag v1.0
+git tag
+git tag -a v1.1 -m "tag for release ver 1.1"
+git tag
+git show v1.0

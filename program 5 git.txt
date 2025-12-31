@@ -1,0 +1,6 @@
+echo "Collaboration experiment file" > index.txt
+git add index.txt
+git commit -m "add index file"
+git remote add origin https://github.com/Amaranatha-288/3VC24CS010.git
+
+git pull --rebase origin main

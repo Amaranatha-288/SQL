@@ -1,0 +1,39 @@
+# Step 1: Create initial files and commit to master
+vi one.c
+git add one.c
+git commit -m "create one.c"
+
+vi two.c
+git add two.c
+git commit -m "create two.c"
+
+git log --oneline
+
+# Step 2: Create new branches b1 and b2
+git branch b1
+git branch b2
+
+# Step 3: Work on branch b1
+git checkout b1
+echo "in branch b1 hello world" >> lab3.c
+echo "in branch b1 branching world" >> lab4.c
+git add lab3.c lab4.c
+git commit -m "lab3 and lab4 for b1"
+
+# Step 4: Work on branch b2
+git checkout b2
+echo "in branch b2 hello world" >> lab5.c
+echo "in branch b2 branching world" >> lab6.c
+git add lab5.c lab6.c
+git commit -m "lab5 and lab6 in branch b2"
+
+# Step 5: Merge branches into master
+git checkout master
+git merge b1
+git merge b2
+
+# Step 6: Clean up merged branches
+git branch --merged
+git branch -d b1
+git branch -d b2
+git status

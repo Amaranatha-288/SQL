@@ -1,0 +1,23 @@
+Experiment: Collaboration and Remote Repositories
+
+Aim:
+To merge a feature branch into the master branch using a custom merge commit message.
+
+Commands Used:
+vi pgm6.c
+git add pgm6.c
+git commit -m "program 6"
+
+git branch feature-branch
+git checkout feature-branch
+
+vi pgm6b.c
+git add pgm6b.c
+git commit -m "pgm 6b feature branch"
+
+git checkout master
+git merge --no-ff feature-branch -m "Merged feature-branch into master"
+
+Result:
+
+The feature branch was successfully merged into the master branch using a custom merge commit message.

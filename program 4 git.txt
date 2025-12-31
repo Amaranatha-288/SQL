@@ -1,0 +1,49 @@
+Experiment: Collaboration and Remote Repositories
+Aim
+
+To clone a remote Git repository to the local machine using Git.
+
+Software Required
+
+Git
+
+Git Bash
+
+Web browser
+
+GitHub account
+
+Operating System: Windows / Linux
+
+Theory
+
+Git supports collaboration by allowing multiple users to work on the same project using remote repositories. A remote repository is usually hosted on platforms like GitHub.
+The git clone command is used to create a local copy of an existing remote repository. It downloads all files, commits, and version history, enabling the user to work locally and collaborate efficiently.
+
+Procedure
+
+Open the GitHub website and select an existing repository.
+
+Add a new file in the repository and commit the changes.
+
+Copy the repository URL.
+
+Open Git Bash on the local machine.
+
+Execute the clone command using the repository URL.
+
+The repository is copied to the local system along with its contents.
+
+Command Used
+git clone https://github.com/lingarajpower/3VC15CS065.git
+
+Output
+Cloning into '3VC15CS065'...
+remote: Enumerating objects, done.
+remote: Counting objects, done.
+remote: Compressing objects, done.
+Receiving objects: 100%, done.
+
+Result
+
+Thus, the remote GitHub repository was successfully cloned to the local machine using the git clone command.
