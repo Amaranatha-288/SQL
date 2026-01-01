@@ -44,3 +44,33 @@ git commit -m "create index file changed in feature"
 # Step 12: Verify
 git status
 git log --oneline --graph --all
+
+
+
+
+
+
+
+
+
+
+
+echo "index file" > index.txt
+git add index.txt
+git commit -m "create index file"
+
+git checkout -b feature
+
+echo "feature change" >> index.txt
+
+git stash
+git stash list
+
+git stash pop
+
+git add index.txt
+git commit -m "index file changed in feature"
+
+git log --oneline --graph --all
+
+
