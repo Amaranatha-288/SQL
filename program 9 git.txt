@@ -13,21 +13,28 @@ You need a specific feature from another branch without merging all other change
 
 
 
-# 1. Make sure you are on master and create a master commit
-git checkout master
+# Initialize repository (run only once)
+git init
+
+# Create first commit on master
 echo "I am in 9a" >> lab9a.txt
 git add lab9a.txt
 git commit -m "I am in 9a branch master"
 
-# 2. Create and switch to new branch 'cheery', add a commit
+# Create and switch to new branch 'cheery'
 git checkout -b cheery
+
+# Add commit in cheery branch
 echo "I am in 9b" >> lab9b.txt
 git add lab9b.txt
 git commit -m "I am in 9b branch cheery"
 
-# 3. Switch back to master and cherry-pick the commit from cheery
+# Switch back to master
 git checkout master
-git cherry-pick $(git log cheery --oneline -1 --pretty=format:"%h")
 
-# 4. Verify the cherry-pick
+# Cherry-pick latest commit from cheery
+git cherry-pick $(git log cheery -1 --pretty=format:"%h")
+
+# Verify cherry-pick
 git log --oneline
+
